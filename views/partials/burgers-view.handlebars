@@ -1,0 +1,20 @@
+<li>
+  <div>
+
+    {{#if devoured}}
+    <h6 class="deletedBurger" data-id="{{this.id}}"><button class="btn btn-sm btn-danger eaten-burger"
+        data-newDevoured="true" data-id="{{id}}" data-devoured="{{devoured}}"> delete <i
+          class="fas fa-trash-alt"></i></button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <del>{{this.burger_name}}</del> </h6>
+
+    {{else}}
+    <h6 data-id="{{this.id}}">
+      <button class="btn btn-sm btn-success eat-burger" data-newDevoured="true" data-id="{{id}}"
+        data-devoured="{{devoured}}">eat it &nbsp; <i class="fas fa-teeth-open"></i></button>
+      &nbsp;&nbsp;{{this.burger_name}} </h6>
+
+    {{/if}}
+  </div>
+
+</li>
